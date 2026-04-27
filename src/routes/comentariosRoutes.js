@@ -32,4 +32,16 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+router.put('/:id', async (req, res) => {
+    try {
+        const comentarioAtualizado = await BibliotecaComentarios.atualizar(req.params.id, req.body);
+        if (!comentarioAtualizado) {
+            return res.status(404).json({ erro: "Comentário não encontrado" });
+        }
+        res.status(200).json(comentarioAtualizado);
+    } catch (error) {
+        res.status(400).json({ erro: error.message });
+    }
+});
+
 module.exports = router;

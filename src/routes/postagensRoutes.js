@@ -32,4 +32,16 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+router.put('/:id', async (req, res) => {
+    try {
+        const postagemAtualizada = await BibliotecaPosts.atualizar(req.params.id, req.body);
+        if (!postagemAtualizada) {
+            return res.status(404).json({ erro: "Postagem não encontrada" });
+        }
+        res.status(200).json(postagemAtualizada);
+    } catch (error) {
+        res.status(400).json({ erro: error.message });
+    }
+});
+
 module.exports = router;

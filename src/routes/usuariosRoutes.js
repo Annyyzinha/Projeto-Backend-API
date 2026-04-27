@@ -32,4 +32,16 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+router.put('/:id', async (req, res) => {
+    try {
+        const usuarioAtualizado = await BibliotecaUsuarios.atualizar(req.params.id, req.body);
+        if (!usuarioAtualizado) {
+            return res.status(404).json({ erro: "Utilizador não encontrado" });
+        }
+        res.status(200).json(usuarioAtualizado);
+    } catch (error) {
+        res.status(400).json({ erro: error.message });
+    }
+});
+
 module.exports = router;

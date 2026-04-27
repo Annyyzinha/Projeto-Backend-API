@@ -29,6 +29,15 @@ class BibliotecaUsuarios {
             throw error;
         }
     }
+
+    async atualizar(id, novosDados) {
+        try {
+            return await Usuario.findByIdAndUpdate(id, novosDados, { new: true, runValidators: true });
+        } catch (error) {
+            logError(error);
+            throw error;
+        }
+    }
 }
 
 module.exports = new BibliotecaUsuarios();

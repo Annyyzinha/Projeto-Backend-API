@@ -29,6 +29,15 @@ class BibliotecaPosts {
             throw error;
         }
     }
+
+    async atualizar(id, novosDados) {
+        try {
+            return await Postagem.findByIdAndUpdate(id, novosDados, { new: true, runValidators: true });
+        } catch (error) {
+            logError(error);
+            throw error;
+        }
+    }
 }
 
 module.exports = new BibliotecaPosts();

@@ -29,6 +29,15 @@ class BibliotecaComentarios {
             throw error;
         }
     }
+
+    async atualizar(id, novosDados) {
+        try {
+            return await Comentario.findByIdAndUpdate(id, novosDados, { new: true, runValidators: true });
+        } catch (error) {
+            logError(error);
+            throw error;
+        }
+    }
 }
 
 module.exports = new BibliotecaComentarios();
