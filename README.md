@@ -5,7 +5,6 @@ Esta é uma API RESTful de microblogging desenvolvida como o **Projeto 1** da di
 ## 🚀 Tecnologias Utilizadas
 
 * **Node.js**: Ambiente de execução.
-* **Express**: Framework para gestão de rotas e servidor.
 * **MongoDB & Mongoose**: Base de dados NoSQL e modelagem de dados.
 * **FS (File System)**: Módulo nativo para persistência de logs de erro.
 
@@ -13,7 +12,6 @@ Esta é uma API RESTful de microblogging desenvolvida como o **Projeto 1** da di
 
 * `/src/models`: Definição dos esquemas do banco de dados.
 * `/src/database`: Classes de biblioteca com a lógica de persistência.
-* `/src/routes`: Definição dos endpoints da API.
 * `/src/utils`: Utilitários como o sistema de logs.
 
 ## 🛠️ Como Executar o Projeto
@@ -23,17 +21,12 @@ Esta é uma API RESTful de microblogging desenvolvida como o **Projeto 1** da di
     npm install
     ```
 
-2.  **Popular a Base de Dados**:
-    Para carregar as receitas e utilizadores fictícios, execute o script de seed:
+2.  **Executar Testes**:
+    Certifique-se de que o MongoDB está ativo localmente e execute:
     ```bash
-    node seed.js
+    node teste.js
     ```
-
-3.  **Iniciar o Servidor**:
-    ```bash
-    node app.js
-    ```
-    A API estará ativa em `http://localhost:3000`.
+    Este comando irá ligar à base de dados, realizar operações de CRUD e simular um erro para validar a geração do log
 
 ---
 **Desenvolvido por:** Anny Vitoria Costa - UTFPR

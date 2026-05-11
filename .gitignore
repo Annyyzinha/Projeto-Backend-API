@@ -1,2 +1,4 @@
 node_modules/
 logs/erros.log
+src/routes/
+seed.js
