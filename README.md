@@ -1,6 +1,6 @@
 # Cozinhando com Amor 🍳
 
-Esta é uma API RESTful de microblogging desenvolvida como o **Projeto 1** da disciplina de Back-end. 
+Esta é uma aplicação de terminal desenvolvida como o Projeto 1 da disciplina de Back-end. 
 
 ## 🚀 Tecnologias Utilizadas
 
