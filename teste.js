@@ -9,14 +9,14 @@ async function executarTestes() {
 
         console.log("\n--- TESTANDO INSERÇÃO ---");
         const novoUsuario = await BibliotecaUsuarios.criar({
-            nome: "Ana",
-            username: "@ana",
-            email: "ana@utfpr.edu.br"
+            nome: "Beatriz",
+            username: "@beatriz",
+            email: "beatriz@utfpr.edu.br"
         });
         console.log(`Usuário criado: ${novoUsuario.nome}`);
 
         const novaReceita = await BibliotecaPosts.publicar({
-            texto: "Receita de bolo de cenoura fácil!",
+            texto: "Receita de torta de limão fácil!",
             autorId: novoUsuario._id
         });
         console.log(`Receita publicada: ${novaReceita.texto}`);
